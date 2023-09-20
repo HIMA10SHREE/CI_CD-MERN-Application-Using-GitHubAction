@@ -1,18 +1,45 @@
-# BUILT AN ONLINE CODING PLATFORM FROM SCRATCH AND DOCKERISED THE APPLICATION AND FINALLY HOSTED IN EC2 SERVER
+# CI_CD OF MERN APPLICATION USING GITHUB ACTION
 
-# BELOW ARE THE STEPS:
+![Screenshot (173)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/4eebe825-e70a-4d97-b167-38532240f508)
 
 
+1.Launch an EC2 instance on AWS
+ runner spec:
+     a. Ubuntu
+     b. t2.medium
+     c. 30 gb size
 
-# HOSTING A MERN APPLICATION ON EC2 INSTANCE
+2.  Set the runner on EC2 with the commands mentioned in github runner
 
-# STEPS:
+3.  Create a yaml workflow
 
-1.Launch the instance..(in mycase I launched t2.micro)
+4.  set the env variables under Secrets and variables
 
-2.ssh to the instance and clone the github repo using git clone
+5.  In the EC2 install docker
 
-3.install the latest node package(in my case I installed nodev18.18.0 since my different packages in the application was not supporting lower version)
+```bash
+##Install in Amazon Ubuntu
+#!/bin/bash
+sudo apt update -y
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" -y
+
+sudo apt update -y
+
+apt-cache policy docker-ce -y
+
+sudo apt install docker-ce -y
+
+#sudo systemctl status docker
+
+sudo chmod 777 /var/run/docker.sock
+```
+
+6. Install node version 18 or above
 
 ```bash
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
@@ -23,39 +50,33 @@
   node -v
 ```
 
-4.go inside the folder and enter the environment variables needed in the project along with other modules.
-
-5.Open the port 3000 and 8000 in security group
-![Screenshot (163)](https://github.com/HIMA10SHREE/Coding-platform/assets/52618743/ea90e87e-c228-4d44-bb38-e279543f505d)
-
-
-6.run the command inside the ec2
-![Screenshot (160)](https://github.com/HIMA10SHREE/Coding-platform/assets/52618743/2ab4133f-d2e4-433b-ba33-cb8826600b5d)
-
-6.Hit the public IP in the ec2 server
-
-![Screenshot (161)](https://github.com/HIMA10SHREE/Coding-platform/assets/52618743/8f8add3c-fc23-485e-a780-1fa1f51d16bc)
-
-
-
-# Commands to run docker:
-
-building image:
+7. login to the dockerhub using credentials
 ```bash
-  docker build -t imagename:version .
-  ```
-
-  eg: docker build -t himashree/onlinecoding_platform:latest .
-
-to containeraise image:
-
-```bash
-  docker container run -d -p 3000:3000 -p 8000:8000 himashree/onlinecoding_platform:latest
+docker login
 ```
-additional command:
 
-to check continers:
-```bash
-  docker container ls
-```
+
+8.open the security ports
+![Screenshot (165)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/b57ba4da-6eeb-412e-a05a-5bced2c03895)
+
+9. run the runner
+![Screenshot (166)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/17891288-fb0f-4a9d-8239-8c8a0cf3c13c)
+
+10 run the security codeql
+![Screenshot (169)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/303530f7-328f-46cc-8bb7-2d1f5e0b4ea5)
+
+
+![Screenshot (170)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/5f6b7207-e645-4deb-a1eb-632e80d74b2d)
+
+![Screenshot (172)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/bdda9eb1-7121-4b76-b7f1-e2aea411eb40)
+
+11. the website is running to the port 3000
+![Screenshot (167)](https://github.com/HIMA10SHREE/CI_CD-MERN-Application-Using-GitHubAction/assets/52618743/b764a205-8122-4432-9181-55be1d3f2357)
+
+
+
+
+
+
+
 
