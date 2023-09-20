@@ -5,8 +5,11 @@
 
 1.Launch an EC2 instance on AWS
  runner spec:
+     
      a. Ubuntu
+     
      b. t2.medium
+     
      c. 30 gb size
 
 2.  Set the runner on EC2 with the commands mentioned in github runner
