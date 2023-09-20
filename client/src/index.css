@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,100;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700&display=swap');
+
+*{
+  margin:0;
+  padding : 0;
+  box-sizing:border-box;
+}
+
+.navbar{
+  font-family: Poppins sans-serif;
+  font-size: 20px;
+  text-transform:inherit;
+  box-shadow: 0 2px 4px 0 rgba(162, 154, 154, 0.2);
+  border-bottom: 1px solid rgba(87, 81, 81, 0.2);
+}
+
+.nav-link{
+  font-weight: 400 !important;
+}
+
+.active{
+  border-bottom: 2px solid rgb(63, 102, 5);
+}
+
+
+.navbar-brand{
+  font-weight: 700;
+  font-family: cursive;
+  
+}
+
+.buttn{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image{
+  margin-top: 60px;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.registrhead{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(24, 7, 39);
+  
+}
+
+.register{
+  display:flex;
+  justify-content:center
+}
+
+.form-main input{
+  border:none;
+  border-bottom: 1px solid black
+}
+
+.form-main form{
+  box-shadow: rgb(45, 19, 19);
+  padding:20px;
+  background-color: white;
+  flex-direction: column;
+  box-shadow: 0 8px 16px 0 rgba(213, 35, 35, 0.2)
+}
+
+.form-main{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  min-height: 75vh;
+  
+}
+
+
+.btn-class{
+  border: 1px solid #000;
+  color:white;
+  background-color:black;
+  text-align: center;
+  padding: 10px 12px ;
+  justify-content: center;
+  border-radius: 10%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(44, 43, 43, 0.19);
+  width:250px
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,100;1,300;1,400&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700&display=swap');
+
+.problemspace{
+    
+     /* margin-top: 50px; */
+     justify-content: center;
+     /* text-align: center; */
+     border-color: black;
+     box-shadow: rgb(45, 19, 19);
+     padding:20px;
+     background-color: white;
+     height: 100vh;
+     flex-direction: column;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+     margin-left:250px;
+     margin-right:250px;
+     
+   }
+
+
+ .prob1{
+    margin-top: 50px;
+ }  
+
+ .prob12{
+    color:black;
+    text-decoration: none;
+ }  
+ 
+ .prob12:hover{
+    color:brown;
+    border-bottom:1px solid azure;
+    size:10ch;
+ }
+
+
+ .nav1{
+  color:black;
+    text-decoration: none;
+ }
+
+
+
+
+
+
+
+
+ .title{
+  margin-top: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+ .description{
+  margin-top: 40px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+ }
+
+
+ .difficulty{
+  margin-top: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+ }
+
+
+ .select{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-weight: 500;
+ }
